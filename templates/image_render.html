@@ -6,12 +6,14 @@
 </head>
 <body>
 <img src= "{{image}}" >
-<py-script>user=crimedb.crime</py-script>
-
+{%user=crimedb.crime%}
+{%user.insert({'approvalStatus':'yes'})%}
 <button type="button">Clickme1</button>
-<py-script>user.insert({'approvalStatus':'yes'})</py-script>
+{%user.insert({'approvalStatus':'yes'})%}
+
 
 <button type="button">Clickme2</button>
-<py-script>user.insert({'approvalStatus':'no'})</py-script>
+{%user.insert({'approvalStatus':'yes'})%}
+
 </body>
 </html>
