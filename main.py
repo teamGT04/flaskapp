@@ -17,10 +17,11 @@ def index():
     
     '''
 
-img = os.path.join('static', 'Image')
+img = os.path.join('static', 'img')
 @app.route('/rickroll')
 def home():
-    file = os.path.join(img, 'GP.png')
+    os.system("scp raspi@192.168.205.244:/images/latest.jpg ./static/img/")
+    file = os.path.join(img, 'latest.jpg')
     return render_template('image_render.html', image=file)
 
 if __name__=='__main__':
