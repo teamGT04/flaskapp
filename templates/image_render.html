@@ -6,8 +6,7 @@
 </head>
 <body>
 <img src= "{{image}}" >
-{%user=crimedb.crime%}
-{%user.insert({'approvalStatus':'yes'})%}
+
 <form method="POST" action="/add">
 		<label>Name:</label>
 		<input type="text" name="name"><br>
@@ -17,11 +16,8 @@
 	</form>
 
 <button type="button">Clickme1</button>
-{%user.insert({'approvalStatus':'yes'})%}
-
 
 <button type="button">Clickme2</button>
-{%user.insert({'approvalStatus':'yes'})%}
 
 </body>
 </html>
