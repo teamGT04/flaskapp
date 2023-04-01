@@ -3,21 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Rendering Local Images Using Flask</title>
+	<style>
+		img{
+			 display: block;
+			  margin-left: auto;
+			  margin-right: auto;
+			  width: 600px;
+			  height: 300px;
+		}
+		.flex-parent {
+		  display: flex;
+		}
+
+		.jc-center {
+		  justify-content: center;
+		}
+
+		button.margin-right {
+		  margin-right: 20px;
+		}
+	</style>
 </head>
 <body>
 <img src= "{{image}}" >
 
-<form method="POST" action="/add">
-		<label>Name:</label>
-		<input type="text" name="name"><br>
-		<label>Email:</label>
-		<input type="email" name="email"><br>
-		<input type="submit" value="Add User">
-	</form>
-
-<button type="button">Clickme1</button>
-
-<button type="button">Clickme2</button>
-
+<br>
+<br>
+<div class="flex-parent jc-center">
+  <button type="submit" class="green margin-right" onclick="myfunc()">Accept</button>
+  <button type="submit" class="magenta">Decline</button>
+</div>
+<script>
+	function myfunc(){
+		window.alert("Updated!!!");
+	}
+</script>
 </body>
 </html>
