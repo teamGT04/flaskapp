@@ -8,6 +8,14 @@
 <img src= "{{image}}" >
 {%user=crimedb.crime%}
 {%user.insert({'approvalStatus':'yes'})%}
+<form method="POST" action="/add">
+		<label>Name:</label>
+		<input type="text" name="name"><br>
+		<label>Email:</label>
+		<input type="email" name="email"><br>
+		<input type="submit" value="Add User">
+	</form>
+
 <button type="button">Clickme1</button>
 {%user.insert({'approvalStatus':'yes'})%}
 
